@@ -1,0 +1,47 @@
+<header class="text-white md:px-10 md:pt-10">
+  <div class="wrapper md:h-[300px] h-[200px] w-full relative">
+    <div class="img absolute bg-black top-0 left-0 h-full w-full z-10">
+      <img
+        src="/img/users/user.jpg"
+        class="w-full h-full object-cover opacity-80"
+        alt="header image"
+      />
+    </div>
+    <div class="text z-20 absolute bottom-0 left-0 md:pl-10 md:pb-10 p-5">
+      <h1 class="md:text-6xl text-4xl font-bold uppercase">good morning</h1>
+      <p class="text-lg capitalize">start listening somthing amazing</p>
+    </div>
+  </div>
+</header>
+
+<div class="user-cards text-white md:p-10">
+  <div class="playlist md:my-10 my-5">
+    <div class="heading text-3xl font-bold mb-4">
+      Latest Playlist Made For You
+    </div>
+    <div
+      class="cards w-full flex items-center overflow-x-scroll overflow-y-hidden"
+    >
+      <% latestPlaylist.map((e) => { %> <% e.playlists.items.map((item)=>{ %>
+      <%- include("../components/card", {item}) %> <% }) %> <% }) %>
+    </div>
+  </div>
+  <div class="recent-song md:my-10 my-5">
+    <div class="heading text-3xl font-bold mb-4">Trending Playlist</div>
+    <div
+      class="cards w-full flex items-center overflow-x-scroll overflow-y-hidden"
+    >
+      <% trendingPlaylist.map((e) => { %> <% e.playlists.items.map((item)=>{ %>
+      <%- include("../components/card", {item}) %> <% }) %> <% }) %>
+    </div>
+  </div>
+  <div class="recent-song md:my-10 my-5">
+    <div class="heading text-3xl font-bold mb-4">Top Playlist</div>
+    <div
+      class="cards w-full flex items-center overflow-x-scroll overflow-y-hidden"
+    >
+      <% topPlaylist.map((e) => { %> <% e.playlists.items.map((item)=>{ %> <%-
+      include("../components/card", {item}) %> <% }) %> <% }) %>
+    </div>
+  </div>
+</div>

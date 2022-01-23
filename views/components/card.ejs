@@ -1,0 +1,19 @@
+<a
+  href="/playlist/<%= item.id %>"
+  class="card md:w-[200px] md:h-[210px] w-[100px] h-[150px] text-white hover:scale-105 md:mr-5 shrink-0 grow-0 bprimary md:p-4 p-2 mr-2 rounded-lg"
+>
+  <div class="img w-full md:h-[150px] h-[80px] overflow-hidden rounded-lg">
+    <% item.images.map((e) => { %>
+    <img
+      src="<%= e.url %>"
+      class="w-full h-full object-cover rounded-lg"
+      alt="playlist <%= item.name %> image"
+    />
+    <% }) %>
+  </div>
+  <div
+    class="heading h-4/5 md:text-lg text-sm uppercase w-full text-center my-2 font-bold"
+  >
+    <%= item.name %>
+  </div>
+</a>

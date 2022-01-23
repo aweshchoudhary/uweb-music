@@ -1,0 +1,21 @@
+<a href="/" class="border-b text-white border-slate-700 block song w-full">
+  <div class="card w-full md:h-[100px] h-[50px] hover:bg-slate-800 p-2 bprimary flex items-center">
+    <div class="img h-full md:w-[90px] w-[40px]">
+      <% song.track.album.images.map((e)=> { %>
+        <% if(e.url){ %>
+          <img src="<%= e.url[0] %>" class="h-full w-full object-cover" alt="song card image" />
+          <% } %>
+            <% }) %>
+    </div>
+    <div class="song-details ml-3">
+      <div class="title md:text-md text-sm font-bold uppercase">
+        <%= song.track.album.name %>
+      </div>
+      <div class="authors text-sm capitalize">
+        <% song.track.album.artists.map((e)=>{ %>
+          <%= e.name %>
+            <% }) %>
+      </div>
+    </div>
+  </div>
+</a>

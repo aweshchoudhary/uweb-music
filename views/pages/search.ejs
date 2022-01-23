@@ -1,0 +1,27 @@
+<section class="search w-full">
+  <div
+    class="search-box md:p-3 p-4 flex my-5 items-center w-11/12 mx-auto bprimary"
+  >
+    <span
+      class="iconify mr-3 text-slate-700"
+      data-icon="fa-solid:search"
+    ></span>
+    <input
+      type="text"
+      class="bg-transparent text-slate-400 md:w-72 h-full"
+      placeholder="Search any song, playlist, etc"
+    />
+  </div>
+  <div class="result">
+    <div
+      class="playlist-cards w-full flex items-center md:px-10 overflow-x-scroll overflow-y-hidden"
+    >
+      <% for (let i = 0; i < 5; i++ ) { %> <%- include("../components/card")%>
+      <% }%>
+    </div>
+    <div class="songs w-full md:p-10 text-white mt-5">
+      <% for(let i = 0; i< 10; i++ ){ %> <%- include("../components/card2")%> <%
+      } %>
+    </div>
+  </div>
+</section>

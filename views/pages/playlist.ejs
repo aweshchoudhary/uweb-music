@@ -1,0 +1,22 @@
+<% playlist.map((item)=> {%>
+  <section class="playlist-container text-white w-full">
+    <div class="header w-full md:h-[300px] h-[150px] flex flex-col items-center justify-center">
+      <h1 class="uppercase text-center md:text-6xl text-4xl font-bold">
+        <%= item.name %>
+      </h1>
+      <div class="flex items-center my-3 uppercase space-x-3">
+        <div class="followers">followers <%= item.followers.total %>
+        </div>
+        <div class="total-song">songs <%= item.tracks.total %>
+        </div>
+      </div>
+    </div>
+    <div class="playlist-body w-full bprimary">
+      <div class="songs w-full md:p-10">
+        <% item.tracks.items.map((e)=> { %>
+          <%- include("../components/card2", {song:e})%>
+            <% }) %>
+      </div>
+    </div>
+  </section>
+  <% }) %>

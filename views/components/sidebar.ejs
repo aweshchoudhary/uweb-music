@@ -1,0 +1,64 @@
+<div
+  class="sidebar md:static absolute md:w-[300px] w-full z-20 md: top-0 h-screen bprimary shrink-0 grow-0"
+  style="left: 100%"
+>
+  <button
+    onclick="closeSideBar()"
+    class="md:hidden absolute top-0 right-0 text-3xl text-slate-500 p-3 hover:text-white"
+  >
+    <span class="iconify" data-icon="ep:close-bold"></span>
+  </button>
+  <div class="logo pl-10 pt-4 md:visible hidden">
+    <h1 class="text-4xl font-bold text-slate-400 uppercase">UWEB</h1>
+  </div>
+  <div class="wrapper md:p-10 py-5">
+    <div
+      class="user border-b border-slate-400 pb-4 mb-4 flex md:flex-col items-center md:justify-center w-full md:px-0 px-5"
+    >
+      <div
+        class="user-img md:h-[100px] md:w-[100px] w-[70px] h-[70px] rounded-full mr-3"
+      >
+        <img
+          src="/img/users/user.jpg"
+          class="h-full w-full object-cover rounded-full"
+          alt="user name image"
+        />
+      </div>
+      <div class="user-name capitalize my-3 text-center text-slate-200 text-xl">
+        Awesh choudhary
+      </div>
+    </div>
+    <div class="buttons border-b border-slate-400 mb-4 pb-4 px-4">
+      <ul class="text-xl capitalize text-slate-400">
+        <li class="py-2">
+          <a href="/search" class="flex items-center hover:text-white"
+            ><span class="iconify mr-3" data-icon="fa-solid:search"></span
+            >search</a
+          >
+        </li>
+        <li class="py-2">
+          <a href="/user/library" class="flex items-center hover:text-white"
+            ><span
+              class="iconify mr-3"
+              data-icon="fluent:library-20-filled"
+            ></span
+            >library</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="playlist">
+      <ul class="text-slate-400 md:px-0 px-5 text-md capitalize space-y-2">
+        <li>
+          <a href="/playlist/item " class="hover:text-white">item name here</a>
+        </li>
+        <li>
+          <a href="/playlist/item " class="hover:text-white">item name here</a>
+        </li>
+        <li>
+          <a href="/playlist/item " class="hover:text-white">item name here</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
